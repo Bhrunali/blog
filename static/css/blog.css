@@ -1,0 +1,110 @@
+.hello {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.title {
+    text-transform: uppercase
+}
+
+.techfont {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.postdate {
+    text-align: center;
+}
+
+.posttitle {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+.postcontent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+.centerstage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-comment {
+    position: absolute;
+    right: auto;
+}
+
+.bigbrand {
+    font-size: 1.5em;
+}
+
+/*COLOR CHANGER*/
+/*Credit and Source: http://codepen.io/thapliyalshivam/pen/dvgXVO*/
+.loader {
+    filter: hue-rotate(0deg);
+    background: linear-gradient(45deg, #DAE2F8, #D6A4A4);
+    animation: hue 5000ms infinite linear;
+}
+
+@keyframes spinify {
+    0% {
+        transform: translate(0px, 0px);
+
+    }
+    33% {
+        transform: translate(0px, 24px);
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+
+    }
+    66% {
+        transform: translate(0px, -16px);
+    }
+
+    88% {
+        transform: translate(0px, 4px);
+
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
